@@ -1,0 +1,22 @@
+{"title":"CS2代练单","describe":"完美D-C+ ","detail":"完美D-C+一口价","price":"120","sales":"0","game":"cs2","categories":["打手"]}
+{"title":"CS2代练单","describe":"完美C","detail":"完美C到C+","price":"0.5","sales":"0","game":"cs2","categories":["打手"]}
+{"title":"CS2代练单","describe":"完美B","detail":"完美B到B+","price":"0.8","sales":"0","game":"cs2","categories":["打手"]}
+{"title":"CS2代练单","describe":" 完美B+","detail":"完美B+到A","price":"1.0","sales":"0","game":"cs2","categories":["打手"]}
+{"title":"CS2代练单","describe":" 完美A","detail":"完美A到A+","price":"1.5","sales":"0","game":"cs2","categories":["打手"]}
+{"title":"CS2代练单","describe":" 完美A+","detail":"完美A+到S","price":"1.8","sales":"0","game":"cs2","categories":["打手"]}
+{"title":"CS2代练单","describe":"青铜S到黄金","detail":"青铜S到黄金","price":"55","sales":"2","game":"cs2","categories":["打手"]}
+{"title":"CS2代练单","describe":"黄金到砖石","detail":"黄金到砖石","price":"75","sales":"2","game":"cs2","categories":["打手"]}
+{"title":"CS2代练单","describe":"钻石到魔王","detail":"钻石到魔王","price":"100","sales":"2","game":"cs2","categories":["打手"]}
+{"title":"CS2娱乐女陪","describe":"CS2娱乐女陪","detail":"一局","price":"25","sales":"2","game":"cs2","categories":["娱乐陪"]}
+{"title":"CS2技术女陪","describe":"B以下","detail":"一局","price":"35","sales":"2","game":"cs2","categories":["技术陪"]}
+{"title":"CS2技术女陪","describe":"B+","detail":"一局","price":"40 ","sales":"2","game":"cs2","categories":["技术陪"]}
+{"title":"CS2技术女陪","describe":"A","detail":"一局","price":"45","sales":"2","game":"cs2","categories":["技术陪"]}
+{"title":"CS2技术女陪","describe":"A+","detail":"一局","price":"50","sales":"2","game":"cs2","categories":["技术陪"]}
+{"title":"CS2娱乐男陪","describe":"CS2娱乐男陪","detail":"一局","price":"25","sales":"2","game":"cs2","categories":["娱乐陪"]}
+{"title":"CS2技术男陪","describe":"B一下","detail":"一局","price":"35","sales":"2","game":"cs2","categories":["技术陪"]}
+{"title":"CS2技术男陪","describe":"B+","detail":"一局","price":"40 ","sales":"2","game":"cs2","categories":["技术陪"]}
+{"title":"CS2技术男陪","describe":"A","detail":"一局","price":"45 ","sales":"2","game":"cs2","categories":["技术陪"]}
+{"title":"CS2技术男陪","describe":"A+","detail":"一局","price":"50","sales":"2","game":"cs2","categories":["技术陪"]}
+{"title":"CS2定级赛","describe":"CS2定级赛","detail":"定级赛B","price":"99","sales":"2","game":"delta","categories":["打手"]}
+{"title":"CS2定级赛","describe":"CS2定级赛","detail":"定级赛B+","price":"198","sales":"2","game":"delta","categories":["打手"]}
+{"title":"CS2定级赛","describe":"CS2定级赛","detail":"定级赛A","price":"298","sales":"2","game":"delta","categories":["打手"]}

@@ -1,0 +1,9 @@
+---
+description: 
+alwaysApply: false
+enabled: true
+updatedAt: 2026-04-12T15:26:19.924Z
+provider: 
+---
+
+D:\pw作为前端目录，D:\pw_backend是后端目录，要求在编写时适当添加注释，注意项目结构的规范性，D:\pw_backend\database是数据源
