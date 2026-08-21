@@ -2,7 +2,7 @@ name: Build and Notify Windows Server
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   notify-server:
