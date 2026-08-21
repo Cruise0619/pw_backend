@@ -1,0 +1,45 @@
+2026-08-20 22:13:30.545  INFO 24652 --- [main] com.pwbackend.PwBackendApplication       : Starting PwBackendApplication v1.0.0 using Java 17.0.2 on BlackWinds-PC with PID 24652 (D:\WXDEV\pw_backend\pw_backend\target\pw_backend-1.0.0.jar started by BlackWinds in D:\WXDEV\pw_backend)
+2026-08-20 22:13:30.548  INFO 24652 --- [main] com.pwbackend.PwBackendApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-20 22:13:31.376  INFO 24652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-08-20 22:13:31.465  INFO 24652 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 8 MongoDB repository interfaces.
+2026-08-20 22:13:32.109  WARN 24652 --- [main] o.apache.tomcat.util.net.SSLHostConfig   : The protocol [TLSv1.3] was added to the list of protocols on the SSLHostConfig named [_default_]. Check if a +/- prefix is missing.
+2026-08-20 22:13:32.110  WARN 24652 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Could not load key store 'null'
+2026-08-20 22:13:32.120  INFO 24652 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-08-20 22:13:32.142 ERROR 24652 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Could not load key store 'null'
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) ~[spring-context-5.3.27.jar!/:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:423) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at com.pwbackend.PwBackendApplication.main(PwBackendApplication.java:13) ~[classes!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[pw_backend-1.0.0.jar:1.0.0]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[pw_backend-1.0.0.jar:1.0.0]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[pw_backend-1.0.0.jar:1.0.0]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[pw_backend-1.0.0.jar:1.0.0]
+Caused by: org.springframework.boot.web.server.WebServerException: Could not load key store 'null'
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSslKeyStore(SslConnectorCustomizer.java:132) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSsl(SslConnectorCustomizer.java:92) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.customize(SslConnectorCustomizer.java:57) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeSsl(TomcatServletWebServerFactory.java:364) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeConnector(TomcatServletWebServerFactory.java:342) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:203) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	... 16 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Resource location must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:201) ~[spring-core-5.3.27.jar!/:5.3.27]
+	at org.springframework.util.ResourceUtils.getURL(ResourceUtils.java:130) ~[spring-core-5.3.27.jar!/:5.3.27]
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSslKeyStore(SslConnectorCustomizer.java:129) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	... 23 common frames omitted
+
