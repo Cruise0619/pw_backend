@@ -1,0 +1,24 @@
+name: Build and Notify Windows Server
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  notify-server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history to get the full commit SHA
+
+      - name: Notify Windows Server
+        run: |
+          # Get the full commit SHA from the GitHub context
+          COMMIT_SHA="${{ github.sha }}"
+          echo "Notifying server for commit: $COMMIT_SHA"
+          curl -X POST \
+            -H "X-Webhook-Token: ${{ secrets.DEPLOY_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d "{\"after\": \"$COMMIT_SHA\"}" \
+            https://blackwinds.cn:9992/webhook
