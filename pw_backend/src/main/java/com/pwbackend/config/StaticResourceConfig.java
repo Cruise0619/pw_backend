@@ -14,7 +14,7 @@ public class StaticResourceConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // 使用绝对路径配置静态资源目录
-        String storagePath = "./storage/";
+        String storagePath = "D:/pw_backend/storage/";
 
         // 配置 /storage/** 路径映射到 storage 目录（商品图片等）
         registry.addResourceHandler("/storage/**")

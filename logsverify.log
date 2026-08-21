@@ -1,0 +1,82 @@
+2026-08-20 22:12:42.784  INFO 26756 --- [main] com.pwbackend.PwBackendApplication       : Starting PwBackendApplication v1.0.0 using Java 17.0.2 on BlackWinds-PC with PID 26756 (D:\WXDEV\pw_backend\pw_backend\target\pw_backend-1.0.0.jar started by BlackWinds in D:\WXDEV\pw_backend)
+2026-08-20 22:12:42.788  INFO 26756 --- [main] com.pwbackend.PwBackendApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-20 22:12:43.657  INFO 26756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-08-20 22:12:43.757  INFO 26756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 8 MongoDB repository interfaces.
+2026-08-20 22:12:44.475  WARN 26756 --- [main] o.apache.tomcat.util.net.SSLHostConfig   : The protocol [TLSv1.3] was added to the list of protocols on the SSLHostConfig named [_default_]. Check if a +/- prefix is missing.
+2026-08-20 22:12:44.477  WARN 26756 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Could not load key store 'null'
+2026-08-20 22:12:44.491  INFO 26756 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2026-08-20 22:12:44.523 ERROR 26756 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Could not load key store 'null'
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577) ~[spring-context-5.3.27.jar!/:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:423) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at com.pwbackend.PwBackendApplication.main(PwBackendApplication.java:13) ~[classes!/:1.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[pw_backend-1.0.0.jar:1.0.0]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[pw_backend-1.0.0.jar:1.0.0]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[pw_backend-1.0.0.jar:1.0.0]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[pw_backend-1.0.0.jar:1.0.0]
+Caused by: org.springframework.boot.web.server.WebServerException: Could not load key store 'null'
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSslKeyStore(SslConnectorCustomizer.java:132) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSsl(SslConnectorCustomizer.java:92) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.customize(SslConnectorCustomizer.java:57) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeSsl(TomcatServletWebServerFactory.java:364) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.customizeConnector(TomcatServletWebServerFactory.java:342) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:203) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	... 16 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Resource location must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:201) ~[spring-core-5.3.27.jar!/:5.3.27]
+	at org.springframework.util.ResourceUtils.getURL(ResourceUtils.java:130) ~[spring-core-5.3.27.jar!/:5.3.27]
+	at org.springframework.boot.web.embedded.tomcat.SslConnectorCustomizer.configureSslKeyStore(SslConnectorCustomizer.java:129) ~[spring-boot-2.6.15.jar!/:2.6.15]
+	... 23 common frames omitted
+
+2026-08-20 22:15:27.875  INFO 10756 --- [main] com.pwbackend.PwBackendApplication       : Starting PwBackendApplication v1.0.0 using Java 17.0.2 on BlackWinds-PC with PID 10756 (D:\WXDEV\pw_backend\pw_backend\target\pw_backend-1.0.0.jar started by BlackWinds in D:\WXDEV\pw_backend)
+2026-08-20 22:15:27.880  INFO 10756 --- [main] com.pwbackend.PwBackendApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-08-20 22:15:28.623  INFO 10756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-08-20 22:15:28.707  INFO 10756 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 8 MongoDB repository interfaces.
+2026-08-20 22:15:29.329  WARN 10756 --- [main] o.apache.tomcat.util.net.SSLHostConfig   : The protocol [TLSv1.3] was added to the list of protocols on the SSLHostConfig named [_default_]. Check if a +/- prefix is missing.
+2026-08-20 22:15:29.377  INFO 10756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (https)
+2026-08-20 22:15:29.391  INFO 10756 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-20 22:15:29.392  INFO 10756 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+2026-08-20 22:15:29.493  INFO 10756 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-20 22:15:29.494  INFO 10756 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1534 ms
+2026-08-20 22:15:29.701  INFO 10756 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2026-08-20 22:15:29.763  INFO 10756 --- [cluster-ClusterId{value='6a870c017485137546214311', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70) ~[mongodb-driver-core-4.4.2.jar!/:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180) ~[mongodb-driver-core-4.4.2.jar!/:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188) ~[mongodb-driver-core-4.4.2.jar!/:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:152) ~[mongodb-driver-core-4.4.2.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:549) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107) ~[mongodb-driver-core-4.4.2.jar!/:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79) ~[mongodb-driver-core-4.4.2.jar!/:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65) ~[mongodb-driver-core-4.4.2.jar!/:na]
+	... 4 common frames omitted
+
+2026-08-20 22:15:30.990  INFO 10756 --- [main] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-0.0.0.0-8443], TLS virtual host [_default_], certificate type [UNDEFINED] configured from [file:D:/WXDEV/pw_backend/ssl/pw_backend.p12] using alias [tomcat] and with trust store [null]
+2026-08-20 22:15:31.019  INFO 10756 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (https) with context path ''
+2026-08-20 22:15:31.031  INFO 10756 --- [main] com.pwbackend.PwBackendApplication       : Started PwBackendApplication in 3.694 seconds (JVM running for 4.179)
+2026-08-20 22:15:38.551  INFO 10756 --- [https-jsse-nio-0.0.0.0-8443-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-20 22:15:38.552  INFO 10756 --- [https-jsse-nio-0.0.0.0-8443-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-20 22:15:38.553  INFO 10756 --- [https-jsse-nio-0.0.0.0-8443-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
