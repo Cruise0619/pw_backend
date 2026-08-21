@@ -21,4 +21,4 @@ jobs:
             -H "X-Webhook-Token: ${{ secrets.DEPLOY_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d "{\"after\": \"$COMMIT_SHA\"}" \
-            https://blackwinds.cn:9992/webhook
+            http://118.89.175.227:9992/webhook
